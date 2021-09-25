@@ -1,9 +1,10 @@
 import './App.css';
+import NavBar from "./components/NavBar/NavBar.js"
 
 function App() {
   return (
     <div className="App">
-      <h1>Componentes</h1>
+      <NavBar brand= "Merchant"/>
     </div>
   );
 }
