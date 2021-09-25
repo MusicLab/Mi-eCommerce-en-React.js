@@ -1,4 +1,6 @@
 .NavBar {
     display: flex;
-    background-color: silver
+    background-color: silver;
+    justify-content: center;
+    justify-content: center
 }
