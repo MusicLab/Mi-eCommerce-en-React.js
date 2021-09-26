@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <NavBar brand= "Merchant"/>
       <ItemListContainer greetings= "Bienvenido a mi eCommerce"/>
-      <CartWidget />
     </div>
   );
 }
