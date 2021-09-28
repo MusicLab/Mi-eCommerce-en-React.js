@@ -1,5 +1,11 @@
 .CartWidget {
     display: flex;
+    justify-content: center;
     background: gold;
     align-items: right;
+    border-radius: 15px
+}
+
+.CartWidget img {
+    border-radius: 15px
 }

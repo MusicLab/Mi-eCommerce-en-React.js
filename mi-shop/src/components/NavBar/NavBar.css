@@ -1,6 +1,18 @@
 .NavBar {
     display: flex;
-    background-color: silver;
+    background-color: rgb(24, 77, 192);
     justify-content: center;
-    justify-content: center
+    align-items: center;
+    flex-direction: column;
+    color: rgb(204, 212, 124)
+}
+
+.NavBar ul {
+    list-style-type: none;
+}
+
+.NavBar a {
+    color: rgb(204, 212, 124);
+    display: flex;
+    flex-direction: row
 }
