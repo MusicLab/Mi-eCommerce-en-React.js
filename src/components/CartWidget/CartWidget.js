@@ -1,5 +1,5 @@
 import React from 'react'
-import img from "../../assets/cart.jpg"
+import img from "../../assets/cart.PNG"
 import "./CartWidget.css"
 
 const CartWidget = () => {
