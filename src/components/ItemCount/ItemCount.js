@@ -12,6 +12,12 @@ const ItemCount = ({initial, stock}) => {
         if (count < stock)
         {setCount(prevCount => prevCount +1)}
     }
+    function myAlert() {
+        alert(`Agregaste ${count} items al carrito`);
+    }
+    function clearState () {
+        setCount(parseInt(initial))
+    }
     return (
         <div className= "ItemCount">
             <button onClick= {decrementCount}>-</button>
@@ -20,7 +26,7 @@ const ItemCount = ({initial, stock}) => {
             <div>
                 <p>En Stock: <strong>{stock}</strong> items</p>
             </div>
-            <button>Agregar al carrito</button>
+            <button onClick= { () => { myAlert(); clearState() }}>Agregar al carrito</button>
             
         </div>
     )
