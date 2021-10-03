@@ -1,0 +1,12 @@
+.ItemCount {
+    background-color: gold;
+    display:flex;
+    padding:30px;
+    width: 25%;
+    justify-content: flex-end;
+    
+}
+
+span {
+    font-size: 30px
+}
