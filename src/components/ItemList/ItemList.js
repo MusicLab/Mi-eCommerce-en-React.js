@@ -7,7 +7,7 @@ const ItemList = () => {
     const [items, setItems] = useState([])
     console.log(items)
     useEffect ( ()=> {
-        fetch("https://api.github.com/users")
+        fetch("https://fakestoreapi.com/products/")
         .then(response => response.json())
         .then((data) => setItems(data))
     }, [])
