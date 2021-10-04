@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from "./components/NavBar/NavBar.js"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js"
 import ItemCount from "./components/ItemCount/ItemCount"
+import 'semantic-ui-css/semantic.min.css'
 
 
 function App() {
