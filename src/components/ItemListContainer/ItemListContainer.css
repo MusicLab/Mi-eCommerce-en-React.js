@@ -1,7 +1,6 @@
 .ItemListContainer {
     display:flex;
-    background-color: rgb(141, 54, 199);
-    flex-direction: column;
+    background-color: rgb(231, 63, 12);
     border-width: 8px;
     border-radius:3px;
 

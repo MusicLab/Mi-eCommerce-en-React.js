@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import "./ItemList.css"
 import Item from "../Item/Item"
+import { Link } from "react-router-dom"
 
 
 const ItemList = () => {
@@ -17,7 +18,7 @@ const ItemList = () => {
             {items.map( (item) => {
                 return(
                     <div key={item.id}>
-                        <Item data={item}/>
+                        <Link to={`/detail/${item.id}`}><Item data={item}/></Link>
                     </div>
                 )
             })}

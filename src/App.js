@@ -8,6 +8,7 @@ import ItemCount from "./components/ItemCount/ItemCount"
 // Views
 import Home from "./views/Home/Home"
 import Contact from "./views/Contact/Contact"
+import ItemDetail from "./views/ItemDetail/ItemDetail"
 
 
 function App() {
@@ -15,10 +16,10 @@ function App() {
     <div className="App">
       <Router>
       <NavBar brand= "Merchant"/>
-        <ItemCount initial= "1" stock= "10" />
         <Switch>
-          <Route path= "/" exact component= {Home}/>
-          <Route path= "/contact" component= {Contact}/>
+          <Route path= "/" exact component= {Home} />
+          <Route path= "/contact" component= {Contact} />
+          <Route path= "/detail/:id" component= {ItemDetail} />
         </Switch>
       </Router>
     </div>

@@ -1,6 +1,5 @@
 .ItemList {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    display:flex;
+    flex-direction: column;
     column-gap: 60px;
 }
