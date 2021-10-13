@@ -16,7 +16,7 @@ const ItemList = () => {
             <h1>Item List</h1>
             {items.map( (item) => {
                 return(
-                    <div>
+                    <div key={item.id}>
                         <Item data={item}/>
                     </div>
                 )

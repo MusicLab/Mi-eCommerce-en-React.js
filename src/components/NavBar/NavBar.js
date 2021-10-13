@@ -5,14 +5,14 @@ import CartWidget from "../CartWidget/CartWidget.js"
 
 const NavBar = ({brand}) => {
     return (
-        <div className= "NavBar">
+        <nav className= "NavBar">
             <h1>{brand}</h1>
             <ul>
-                <li><a href="https://google.com">Google</a></li>
-                <li><a href="https://hotmail.com">Hotmail</a></li>
+                <li>Google</li>
+                <li>Hotmail</li>
             </ul>
             <div><CartWidget /></div>        
-        </div>
+        </nav>
         
 
     )

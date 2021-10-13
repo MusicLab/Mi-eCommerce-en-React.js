@@ -1,3 +1,15 @@
 .Item {
-    background-color: red;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    padding: 20px;
+    border-style: solid
+}
+
+.img-Item {
+    max-width: 80%;
+}
+
+.h1-Item {
+    font-size: 15px;
 }

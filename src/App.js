@@ -1,16 +1,26 @@
 import './App.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+
+// Components
 import NavBar from "./components/NavBar/NavBar.js"
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js"
 import ItemCount from "./components/ItemCount/ItemCount"
-import 'semantic-ui-css/semantic.min.css'
+
+// Views
+import Home from "./views/Home/Home"
+import Contact from "./views/Contact/Contact"
 
 
 function App() {
   return (
     <div className="App">
+      <Router>
       <NavBar brand= "Merchant"/>
-      <ItemCount initial= "1" stock= "10" />
-      <ItemListContainer greetings= "Bienvenido a mi eCommerce"/>
+        <ItemCount initial= "1" stock= "10" />
+        <Switch>
+          <Route path= "/" exact component= {Home}/>
+          <Route path= "/contact" component= {Contact}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
