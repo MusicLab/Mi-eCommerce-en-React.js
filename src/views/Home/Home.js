@@ -4,7 +4,6 @@ import ItemListContainer from "../../components/ItemListContainer/ItemListContai
 const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
             <ItemListContainer greetings= "Bienvenido a mi eCommerce"/>        
         </div>
     )

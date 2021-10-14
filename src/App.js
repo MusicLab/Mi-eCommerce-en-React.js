@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <NavBar brand= "Merchant"/>
+      <NavBar brand= "./assets/favicon.jpg"/>
         <Switch>
           <Route path= "/" exact component= {Home} />
           <Route path= "/contact" component= {Contact} />

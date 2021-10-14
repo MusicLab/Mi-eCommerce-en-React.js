@@ -6,7 +6,7 @@ import ItemList from "../ItemList/ItemList.js"
 const ItemListContainer = ({greetings}) => {
     return (
         <div className= "ItemListContainer">
-            <h1>{greetings}</h1>
+            <h1 className="h1-ItemListContainer">Items</h1>
             <ItemList/>        
         </div>
     )

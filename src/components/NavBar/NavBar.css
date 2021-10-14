@@ -24,3 +24,9 @@
 .Link {
     padding: 30px
 }
+
+.img-NavBar {
+    height:80px;
+    filter: invert(80%)
+
+}

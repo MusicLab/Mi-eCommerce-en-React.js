@@ -14,7 +14,6 @@ const ItemList = () => {
     }, [])
     return (
         <div className= "ItemList">
-            <h1>Item List</h1>
             {items.map( (item) => {
                 return(
                     <div key={item.id}>

@@ -1,5 +1,7 @@
 .ItemList {
-    display:flex;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
     flex-direction: column;
-    column-gap: 60px;
+    column-gap: 30px;
+
 }
