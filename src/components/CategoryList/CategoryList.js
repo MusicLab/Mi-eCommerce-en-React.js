@@ -1,17 +1,24 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const CategoryList = () => {
-    const [items, setItems] = useState([])
-    let categoria_elegida = categoria
-    console.log(categoria_elegida)
+    const [categoriass, setCategorias] = useState([])
+    
     useEffect ( ()=> {
         fetch("https://fakestoreapi.com/products/")
         .then(response => response.json())
-        .then((data) => setItems(data))
+        .then((data) => setCategorias(data))
+    
     }, [])
+    let listaCategorias = []
     return (
         <div>
-            
+           {categoriass.filter( (categoria1) => {
+               if (!(categoria1.category in listaCategorias)) {
+                console.log("no esta")
+                listaCategorias += categoria1.category
+
+               }
+           })} 
         </div>
     )
 }
