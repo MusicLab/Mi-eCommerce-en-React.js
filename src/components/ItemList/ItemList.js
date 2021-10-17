@@ -4,9 +4,10 @@ import Item from "../Item/Item"
 import { Link } from "react-router-dom"
 
 
-const ItemList = () => {
+const ItemList = ({categoria}) => {
     const [items, setItems] = useState([])
-    console.log(items)
+    let categoria_elegida = categoria
+    console.log(categoria_elegida)
     useEffect ( ()=> {
         fetch("https://fakestoreapi.com/products/")
         .then(response => response.json())
@@ -15,11 +16,24 @@ const ItemList = () => {
     return (
         <div className= "ItemList">
             {items.map( (item) => {
-                return(
-                    <div key={item.id}>
-                        <Link to={`/detail/${item.id}`}><Item data={item}/></Link>
-                    </div>
-                )
+                if (item.category == categoria_elegida) {
+                    return(
+                        <div key={item.id}>
+                            <Link to={`/detail/${item.id}`}><Item data={item}/></Link>
+                        </div>
+                    )
+                }
+                if (categoria_elegida == null) {
+                    return(
+                        <div key={item.id}>
+                            <Link to={`/detail/${item.id}`}><Item data={item}/></Link>
+                        </div>
+                    )
+                }
+                else {
+                    console.log("carajo")
+                }
+                
             })}
         </div>
     )

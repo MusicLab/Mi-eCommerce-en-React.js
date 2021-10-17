@@ -7,7 +7,7 @@ const ItemListContainer = ({greetings}) => {
     return (
         <div className= "ItemListContainer">
             <h1 className="h1-ItemListContainer">Items</h1>
-            <ItemList/>        
+            <ItemList categoria="electronics"/>        
         </div>
     )
 }
