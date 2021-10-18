@@ -15,10 +15,10 @@ const NavBar = ({brand}) => {
             </ul>
             <div>
                 <ul>
-                    <Link className= "Link">Ropa Hombre</Link>
-                    <Link className= "Link">Ropa Mujer</Link>
-                    <Link className= "Link">Joyas</Link>
-                    <Link className= "Link">Electronica</Link>
+                    <Link className= "Link" to= "/category/men's clothing">Ropa Hombre</Link>
+                    <Link className= "Link" to= "/category/women's clothing">Ropa Mujer</Link>
+                    <Link className= "Link" to= "/category/jewelery">Joyas</Link>
+                    <Link className= "Link" to= "/category/electronics">Electronica</Link>
                 </ul>
             </div>
             <div><CartWidget /></div>        

@@ -9,19 +9,23 @@ import NavBar from "./components/NavBar/NavBar.js"
 import Home from "./views/Home/Home"
 import Contact from "./views/Contact/Contact"
 import ItemDetail from "./views/ItemDetail/ItemDetail"
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
+     <Router>
       <NavBar brand= "Merchant"/>
-        <Switch>
-          <Route path= "/" exact component= {Home} />
-          <Route path= "/contact" component= {Contact} />
-          <Route path= "/detail/:id" component= {ItemDetail} />
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path= "/" exact component= {Home} />
+        <Route path= "/contact" component= {Contact} />
+        <Route exact path= "/detail/:id" component= {ItemDetail} />
+        <Route path= "/category/:categoryId">
+          <ItemListContainer/> 
+        </Route>
+      </Switch>
+     </Router>
     </div>
   );
 }
