@@ -2,7 +2,6 @@
     display: flex;
     background-color: rgb(24, 77, 192);
     opacity: 0.9;
-    position: sticky;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
@@ -15,19 +14,18 @@
     display:flex;
     font-size:20px;
     border-radius: 30px;
-    border-style: solid
-    
+    border-style: solid;
+    padding: 1px;
+    margin: 10px
     
 }
 
-.NavBar a {
-    color: rgb(204, 212, 124);
-    display: flex;
-    flex-direction: row
-}
+
 
 .Link {
-    padding: 30px
+    color: rgb(204, 212, 124);
+    display: flex;
+    padding: 30px;
 }
 
 .img-NavBar {

@@ -10,7 +10,7 @@ const ItemDetail = ({match}) => {
         .then((res) => setItem(res.data))
     }, [match.params.id])
     return (
-        <div>
+        <div className= "ItemDetail">
             <ItemCount initial= "1" stock= "10" />
             <ItemDetail2 data={item}/>
         </div>

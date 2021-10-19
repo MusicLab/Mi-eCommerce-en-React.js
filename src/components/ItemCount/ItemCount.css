@@ -2,7 +2,8 @@
     background-color: gold;
     display:flex;
     padding:30px;
-    width: 25%;
+    margin: 50px;
+    width: 25rem;
     justify-content: flex-start
     
 }
