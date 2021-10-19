@@ -1,6 +1,8 @@
 .NavBar {
     display: flex;
     background-color: rgb(24, 77, 192);
+    opacity: 0.9;
+    position: sticky;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
@@ -11,6 +13,9 @@
 .NavBar ul {
     list-style-type: none;
     display:flex;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid
     
     
 }
