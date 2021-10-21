@@ -27,3 +27,11 @@
     height: 1rem;
     overflow: hidden
 }
+
+.h2-Item {
+    display:flex;
+    font-size: 15px;
+    height: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+}

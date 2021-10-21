@@ -21,11 +21,19 @@
 }
 
 
+.NavBar a {
+    color: rgb(204, 212, 124);
+    display: flex;
+    flex-direction:row;
+    text-decoration:none;
+}
+
 
 .Link {
     color: rgb(204, 212, 124);
     display: flex;
     padding: 30px;
+    font-weight: 10px
 }
 
 .img-NavBar {

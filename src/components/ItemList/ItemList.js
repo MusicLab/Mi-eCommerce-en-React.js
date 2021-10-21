@@ -17,7 +17,7 @@ const ItemList = ({categoria}) => {
             {items.map( (item) => {   
             return(
                 <div key={item.id}>
-                    <Link to={`/detail/${item.id}`}><Item data={item}/></Link>
+                    <Link className= "Link"to={`/detail/${item.id}`}><Item data={item}/></Link>
                 </div>
             )  
             })}

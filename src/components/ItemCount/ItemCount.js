@@ -2,8 +2,16 @@ import React from 'react'
 import { useState } from "react"
 import "./ItemCount.css"
 
+
+
+
+
+
 const ItemCount = ({initial, stock}) => {
     const [count, setCount] = useState(parseInt(initial))
+    const onAdd = () => {
+        console.log("click")
+    }
     function decrementCount() {
         if (count > 0)
         {setCount(prevCount => prevCount -1)}
@@ -18,6 +26,7 @@ const ItemCount = ({initial, stock}) => {
     function clearState () {
         setCount(parseInt(initial))
     }
+
     return (
         <div className= "ItemCount">
             <button onClick= {decrementCount}>-</button>
@@ -26,7 +35,7 @@ const ItemCount = ({initial, stock}) => {
             <div>
                 <p>En Stock: <strong>{stock}</strong> items</p>
             </div>
-            <button onClick= { () => { myAlert(); clearState() }}>Agregar al carrito</button>
+            <button onClick= {() => {onAdd(); myAlert(); clearState() }}>Agregar al carrito</button>
             
         </div>
     )
