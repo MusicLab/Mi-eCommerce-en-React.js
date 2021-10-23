@@ -1,20 +1,44 @@
-import React, {useState, useEffect} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import axios from "axios"
 import ItemDetail2 from "../../components/ItemDetail2/ItemDetail2"
 import ItemCount from "../../components/ItemCount/ItemCount"
+import { CartContext } from '../../CartContext'
+
+
+
 
 const ItemDetail = ({match}) => {
     const [item, setItem] = useState([])
-    const [isRender, setIsRender] = useState(true)
+    const {addItemCart, cartItems} = useContext(CartContext)
+    const [count, setCount] = useState(parseInt(1))
+    const onAdd = (countAux) => {
+        setCount(countAux)
+        addItemCart({
+            ...item, count
+        })
+    }
+    const [isInCart, setIsInCart] = useState(false)
+    const busquedaCart = () => {
+        
+      
+    }
+    
 
     useEffect( () => {
         axios(`https://fakestoreapi.com/products/${match.params.id}`)
         .then((res) => setItem(res.data))
+        busquedaCart()
     }, [match.params.id])
     return (
         <div className= "ItemDetail">
-            {isRender && <ItemCount initial= "1" stock= "10" />}
-            <ItemDetail2 data={item}/>
+            { <ItemCount onAdd= {onAdd} initial= {3} stock= {11} />}
+            <div className= "Item">
+                <h1 className="h1-Item">{item.title}</h1>
+                <img className= "img-Item" src={item.image} alt={item.title}></img>
+                <h2>{item.price}</h2>
+                <h2>{item.description}</h2>
+                <h2>{item.category}</h2>
+            </div>
         </div>
     )
 }

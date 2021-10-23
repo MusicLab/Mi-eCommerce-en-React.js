@@ -1,5 +1,6 @@
 cambiar fetch por axios
 eliminar el componente ItemListContainer
 implementar redux
+modificar todas las funciones para que sean funcionales
 
 https://www.framer.com/motion/

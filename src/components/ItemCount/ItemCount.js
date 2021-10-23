@@ -1,17 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { useState } from "react"
 import "./ItemCount.css"
+import { CartContext } from '../../CartContext'
 
 
 
 
 
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({onAdd, initial, stock}) => {
     const [count, setCount] = useState(parseInt(initial))
-    const onAdd = () => {
-        console.log("click")
-    }
+    console.log(stock)
+    
     function decrementCount() {
         if (count > 0)
         {setCount(prevCount => prevCount -1)}
@@ -26,6 +26,13 @@ const ItemCount = ({initial, stock}) => {
     function clearState () {
         setCount(parseInt(initial))
     }
+    function todos() {
+        
+        myAlert()
+        onAdd(count)
+        clearState()
+
+    }
 
     return (
         <div className= "ItemCount">
@@ -35,7 +42,7 @@ const ItemCount = ({initial, stock}) => {
             <div>
                 <p>En Stock: <strong>{stock}</strong> items</p>
             </div>
-            <button onClick= {() => {onAdd(); myAlert(); clearState() }}>Agregar al carrito</button>
+            <button onClick= {()=> todos()}>Agregar al carrito</button>
             
         </div>
     )

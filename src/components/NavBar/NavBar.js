@@ -3,6 +3,7 @@ import "./NavBar.css"
 import CartWidget from "../CartWidget/CartWidget.js"
 import {Link} from "react-router-dom"
 import imgHandShake from "../../assets/favicon.jpg"
+import imgCart from "../../assets/cart.PNG"
 
 
 const NavBar = ({brand}) => {
@@ -21,7 +22,7 @@ const NavBar = ({brand}) => {
                     <Link className= "Link" to= "/category/electronics"><strong>Electronica</strong></Link>
                 </ul>
             </div>
-            <div><CartWidget /></div>        
+            <Link className= "Link" to= "/cart"><img className= "img-NavBar-cart" src={imgCart} alt="cart"/></Link>      
         </nav>
         
 
