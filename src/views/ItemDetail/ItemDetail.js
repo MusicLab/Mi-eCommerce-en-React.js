@@ -1,6 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
 import axios from "axios"
-import ItemDetail2 from "../../components/ItemDetail2/ItemDetail2"
 import ItemCount from "../../components/ItemCount/ItemCount"
 import { CartContext } from '../../CartContext'
 
@@ -9,13 +8,13 @@ import { CartContext } from '../../CartContext'
 
 const ItemDetail = ({match}) => {
     const [item, setItem] = useState([])
-    const {addItemCart, cartItems} = useContext(CartContext)
-    const [count, setCount] = useState(parseInt(1))
+    const {addItemCart} = useContext(CartContext)
+    const {count, setCount} = useContext(CartContext)
     const onAdd = (countAux) => {
         setCount(countAux)
         addItemCart({
             ...item, count
-        })
+        })   
     }
     const [isInCart, setIsInCart] = useState(false)
     const busquedaCart = () => {

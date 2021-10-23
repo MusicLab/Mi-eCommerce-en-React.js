@@ -1,6 +1,5 @@
 import React from 'react'
 import "./NavBar.css"
-import CartWidget from "../CartWidget/CartWidget.js"
 import {Link} from "react-router-dom"
 import imgHandShake from "../../assets/favicon.jpg"
 import imgCart from "../../assets/cart.PNG"
