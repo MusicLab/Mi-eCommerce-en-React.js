@@ -5,7 +5,7 @@ import imgHandShake from "../../assets/favicon.jpg"
 import imgCart from "../../assets/cart.PNG"
 
 
-const NavBar = ({brand}) => {
+const NavBar = () => {
     return (
         <nav className= "NavBar">
             <Link className= "Link" to= "/"><img className= "img-NavBar" src={imgHandShake} alt="futuro gif"></img></Link>

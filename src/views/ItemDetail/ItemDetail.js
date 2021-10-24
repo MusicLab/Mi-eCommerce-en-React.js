@@ -8,25 +8,24 @@ import { CartContext } from '../../CartContext'
 
 const ItemDetail = ({match}) => {
     const [item, setItem] = useState([])
-    const {addItemCart} = useContext(CartContext)
-    const {count, setCount} = useContext(CartContext)
+    const {addItemCart, cartItems, count, setCount} = useContext(CartContext)
     const onAdd = (countAux) => {
         setCount(countAux)
         addItemCart({
             ...item, count
         })   
     }
-    const [isInCart, setIsInCart] = useState(false)
-    const busquedaCart = () => {
-        
-      
-    }
-    
+    //const [isInCart, setIsInCart] = useState(false)
+    //const busquedaCart = (item) => {
+      //  cartItems.filter(item => item2.id == item.id )
 
+    //}
+    //busquedaCart()
+    
     useEffect( () => {
         axios(`https://fakestoreapi.com/products/${match.params.id}`)
         .then((res) => setItem(res.data))
-        busquedaCart()
+        
     }, [match.params.id])
     return (
         <div className= "ItemDetail">

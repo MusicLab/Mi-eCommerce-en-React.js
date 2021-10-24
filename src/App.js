@@ -1,6 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 
+
 // Components
 import NavBar from "./components/NavBar/NavBar.js"
 
@@ -9,8 +10,8 @@ import NavBar from "./components/NavBar/NavBar.js"
 import Home from "./views/Home/Home"
 import Contact from "./views/Contact/Contact"
 import ItemDetail from "./views/ItemDetail/ItemDetail"
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Cart from "./views/Cart/Cart"
+import ItemList from "./components/ItemList/ItemList"
 
 // Context
 import {CartProvider} from "./CartContext"
@@ -21,13 +22,13 @@ function App() {
     <CartProvider>
       <div className="App">
       <Router>
-        <NavBar brand= "Merchant" />
+        <NavBar />
         <Switch>
           <Route path= "/" exact component= {Home} />
-          <Route path= "/contact" component= {Contact} />
+          <Route path= "/contact" component= {Contact} />h
           <Route exact path= "/detail/:id" component= {ItemDetail} />
           <Route path= "/category/:categoryId">
-            <ItemListContainer/> 
+            <Home /> 
           </Route>
           <Route path= "/cart" component= {Cart} />
         </Switch>

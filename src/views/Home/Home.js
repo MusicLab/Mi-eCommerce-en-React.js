@@ -1,10 +1,12 @@
 import React from 'react'
-import ItemListContainer from "../../components/ItemListContainer/ItemListContainer"
+import ItemList from "../../components/ItemList/ItemList"
+import {useParams} from "react-router-dom"
 
 const Home = () => {
+    const {categoryId} = useParams()
     return (
         <div>
-            <ItemListContainer greetings= "Bienvenido a mi eCommerce"/>        
+            <ItemList categoria= {categoryId}/>        
         </div>
     )
 }
