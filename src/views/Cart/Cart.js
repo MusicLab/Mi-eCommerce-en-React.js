@@ -8,6 +8,11 @@ import Item from "../../components/Item/Item"
 
 const Cart = () => {
     const {cartItems, removeItemCart} = useContext(CartContext)
+    const sumarCart = (cartItems) => {
+        let sumaTotal = 0
+        cartItems.forEach((i) => sumaTotal += i.count*i.price )
+        return sumaTotal
+    }
 
     return (
         <div className = "Cart">
@@ -20,6 +25,7 @@ const Cart = () => {
                 </div>
             )  
             })}
+            <h1>$ Total : {sumarCart(cartItems)} </h1>
         </div>
     )
 }

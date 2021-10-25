@@ -11,7 +11,7 @@ import Home from "./views/Home/Home"
 import Contact from "./views/Contact/Contact"
 import ItemDetail from "./views/ItemDetail/ItemDetail"
 import Cart from "./views/Cart/Cart"
-import ItemList from "./components/ItemList/ItemList"
+
 
 // Context
 import {CartProvider} from "./CartContext"

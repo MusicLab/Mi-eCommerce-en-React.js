@@ -2,11 +2,6 @@ import React, {useContext} from 'react'
 import "./ItemCount.css"
 import { CartContext } from '../../CartContext'
 
-
-
-
-
-
 const ItemCount = ({onAdd, initial, stock}) => {
     const {count, setCount} = useContext(CartContext)
     
@@ -18,15 +13,12 @@ const ItemCount = ({onAdd, initial, stock}) => {
         if (count < stock)
         {setCount(prevCount => prevCount +1)}
     }
-    function myAlert() {
-        alert(`Agregaste ${count} items al carrito`);
-    }
+
     function clearState () {
         setCount(parseInt(initial))
     }
-    function todos() {
-        
-        myAlert()
+    function todos() { 
+
         onAdd(count)
         clearState()
 
