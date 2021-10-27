@@ -1,4 +1,10 @@
-ItemDetail {
+.ItemDetail {
+    align-items: column;
+    justify-content: flex-end
+
+}
+
+.ItemCount-div {
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
 }

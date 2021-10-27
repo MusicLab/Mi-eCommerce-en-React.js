@@ -5,7 +5,8 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    color: rgb(204, 212, 124)
+    color: rgb(204, 212, 124);
+    position: fidex
     
 }
 
@@ -43,5 +44,24 @@
 }
 
 .img-NavBar-cart {
-    width: 90px
+    width: 90px;
+}
+
+.p-navbar {
+    position: absolute;
+    color:red;
+    top: 10%;
+    right: 35%;
+    background-color: blue;
+    width: 20px;
+    height:  20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-color: white;
+}
+
+.CartWidget {
+    position: relative
 }

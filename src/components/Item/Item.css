@@ -17,14 +17,16 @@
   }
 
 .img-Item {
-    max-width: 6rem;
+    max-width: 10rem;
     object-fit: contain;
     height:10rem
 }
 
 .h1-Item {
     font-size: 15px;
-    height: 1rem;
+    height: 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden
 }
 

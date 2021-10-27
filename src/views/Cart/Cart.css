@@ -1,7 +1,19 @@
+.Cart {
+    justify-content: center;
+    align-items: column;
+}
+
 .cart-div {
     color: white
+    
 }
 
 .Cart h1 {
     color:white
 }
+
+.cart-control {
+    align-items: row;
+    background-color:red
+}
+
