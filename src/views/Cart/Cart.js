@@ -28,11 +28,12 @@ const Cart = () => {
                     </div>
                 </div>
             )  
-            }  ) }<button>Terminar Compra</button></>
+            }  ) }</>
             }
             
             <h1>$ Total : {sumarCart(cartItems)} </h1>
-            <button onClick= {() => borrarTodo()}>Borrar todos los items</button>
+            {cartItems.length > 1 ? <button onClick= {() => borrarTodo()}>Remover todos los items</button> : <></>}
+            <button>Terminar Compra</button>
         </div>
     )
 }

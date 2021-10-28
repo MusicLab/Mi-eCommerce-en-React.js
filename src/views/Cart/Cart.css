@@ -3,17 +3,32 @@
     align-items: column;
 }
 
+
+
 .cart-div {
-    color: white
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+
     
 }
 
 .Cart h1 {
-    color:white
+    color:white;
+
 }
 
 .cart-control {
-    align-items: row;
-    background-color:red
+    background-color: rgb(24, 77, 192);
+    display: flex;
+    justify-content: center;
 }
 
+
+.Cart button {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    width: 30%
+}
