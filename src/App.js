@@ -1,6 +1,11 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 
+//firestore
+import {db} from "./firebaseconfig"
+import {collection, getDocs} from "firebase/firestore"
+import React, {useState, useEffect} from "react"
+
 
 // Components
 import NavBar from "./components/NavBar/NavBar.js"
@@ -18,6 +23,7 @@ import {CartProvider} from "./CartContext"
 
 
 function App() {
+  
   return (
     <CartProvider>
       <div className="App">
@@ -25,11 +31,9 @@ function App() {
         <NavBar />
         <Switch>
           <Route path= "/" exact component= {Home} />
-          <Route path= "/contact" component= {Contact} />h
+          <Route path= "/contact" component= {Contact} />
           <Route exact path= "/detail/:id" component= {ItemDetail} />
-          <Route path= "/category/:categoryId">
-            <Home /> 
-          </Route>
+          <Route exact path= "/:categoryId" component= {Home}/>
           <Route path= "/cart" component= {Cart} />
         </Switch>
       </Router>

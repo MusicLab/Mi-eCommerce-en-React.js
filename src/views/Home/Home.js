@@ -4,9 +4,10 @@ import {useParams} from "react-router-dom"
 
 const Home = () => {
     const {categoryId} = useParams()
+    console.log(categoryId)
     return (
         <div>
-            <ItemList categoria= {categoryId}/>        
+            <ItemList categoria = {categoryId}/>        
         </div>
     )
 }

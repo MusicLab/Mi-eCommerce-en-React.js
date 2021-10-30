@@ -6,11 +6,7 @@ https://www.framer.com/motion/
 
 
 PARA VER CON ARI
-mover ItemCount a la derecha ---
-como ponerle circulo al cartcount 
-si no hay items que no renderize cartcount ---
-<si no hay items boton para home -----
-boton de terminar mi compra si hay items> -----
+repasar route
 como deberia ser itemcount
 
 

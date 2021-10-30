@@ -18,8 +18,8 @@ const NavBar = () => {
             </ul>
             <div>
                 <ul>
-                    <Link className= "Link" to= "/category/men's clothing"><strong>Ropa Hombre</strong></Link>
-                    <Link className= "Link" to= "/category/women's clothing"><strong>Ropa Mujer</strong></Link>
+                    <Link className= "Link" to= "/electronics"><strong>Electronics</strong></Link>
+                    <Link className= "Link" to= "/games"><strong>Games</strong></Link>
                     <Link className= "Link" to= "/category/jewelery"><strong>Joyas</strong></Link>
                     <Link className= "Link" to= "/category/electronics"><strong>Electronica</strong></Link>
                 </ul>
