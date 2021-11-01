@@ -8,7 +8,7 @@ import imgCart from "../../assets/cart.PNG"
 
 
 const NavBar = () => {
-    const {cartCount, cartItems, removeItemCart} = useContext(CartContext)
+    const {cartItems} = useContext(CartContext)
     return (
         <nav className= "NavBar">
             <Link className= "Link" to= "/"><img className= "img-NavBar" src={imgHandShake} alt="futuro gif"></img></Link>
@@ -18,10 +18,10 @@ const NavBar = () => {
             </ul>
             <div>
                 <ul>
-                    <Link className= "Link" to= "/electronics"><strong>Electronics</strong></Link>
-                    <Link className= "Link" to= "/games"><strong>Games</strong></Link>
-                    <Link className= "Link" to= "/category/jewelery"><strong>Joyas</strong></Link>
-                    <Link className= "Link" to= "/category/electronics"><strong>Electronica</strong></Link>
+                    <Link className= "Link" to= "/category/consolas"><strong>Consolas</strong></Link>
+                    <Link className= "Link" to= "/category/juegos"><strong>Juegos</strong></Link>
+                    <Link className= "Link" to= "/category/portatiles"><strong>Portatiles</strong></Link>
+                    <Link className= "Link" to= "/category/accesorios"><strong>Accesorios</strong></Link>
                 </ul>
             </div>
             <div className= "CartWidget">

@@ -14,7 +14,6 @@ const Cart = () => {
         cartItems.forEach((i) => sumaTotal += i.count*i.price )
         return sumaTotal
     }
-    
 
     return (
         <div className = "Cart">

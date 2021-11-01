@@ -1,10 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
-
-//firestore
-import {db} from "./firebaseconfig"
-import {collection, getDocs} from "firebase/firestore"
-import React, {useState, useEffect} from "react"
+import React from "react"
 
 
 // Components
@@ -33,7 +29,7 @@ function App() {
           <Route path= "/" exact component= {Home} />
           <Route path= "/contact" component= {Contact} />
           <Route exact path= "/detail/:id" component= {ItemDetail} />
-          <Route exact path= "/:categoryId" component= {Home}/>
+          <Route exact path= "/category/:categoryId" component= {Home}/>
           <Route path= "/cart" component= {Cart} />
         </Switch>
       </Router>

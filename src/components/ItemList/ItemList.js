@@ -9,14 +9,10 @@ import {collection, getDocs, query, where} from "firebase/firestore"
 
 
 const ItemList = ({categoria}) => {
-    const [items, setItems] = useState([])
-    console.log(`categoria en itemlist ${categoria}`)
-    
-    
+    const [items, setItems] = useState([]) 
     useEffect (()=> {
         const requestData = async() => {
           const products = await getDocs(collection(db, "products"))
-          
           const docs = []
           products.forEach((document)=> {docs.push({...document.data(), id: document.id})
         })
@@ -31,7 +27,7 @@ const ItemList = ({categoria}) => {
           setItems(docs)
           }
         categoria ? requestDataWhere() : requestData()
-      }, [])
+      }, [categoria])
       
     return (
         <div className= "ItemList">
