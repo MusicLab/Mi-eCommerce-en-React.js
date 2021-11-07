@@ -2,6 +2,7 @@ import "./Cart.css"
 import React, {useContext} from 'react'
 import { CartContext } from '../../CartContext'
 import Item from "../../components/Item/Item"
+import FormCompra from "../../components/FormCompra/FormCompra"
 
 
 
@@ -33,6 +34,7 @@ const Cart = () => {
             <h1>$ Total : {sumarCart(cartItems)} </h1>
             {cartItems.length > 1 ? <button onClick= {() => borrarTodo()}>Remover todos los items</button> : <></>}
             <button>Terminar Compra</button>
+            <FormCompra></FormCompra>
         </div>
     )
 }

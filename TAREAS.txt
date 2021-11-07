@@ -8,6 +8,7 @@ https://www.framer.com/motion/
 PARA VER CON ARI
 repasar route
 como deberia ser itemcount
+crear archivo ENV
 
 
 

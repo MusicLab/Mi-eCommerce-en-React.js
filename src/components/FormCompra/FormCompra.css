@@ -1,0 +1,14 @@
+.FormCompra {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    height: 50 rem;
+    text-align: center;
+
+}
+
+.button {
+    display:flex;
+    justify-content: center;
+}
