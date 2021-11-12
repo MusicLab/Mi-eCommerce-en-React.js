@@ -9,12 +9,8 @@ import FormCompra from "../../components/FormCompra/FormCompra"
 
 
 const Cart = () => {
-    const {borrarTodo, cartCount, cartItems, removeItemCart} = useContext(CartContext)
-    const sumarCart = (cartItems) => {
-        let sumaTotal = 0
-        cartItems.forEach((i) => sumaTotal += i.count*i.price )
-        return sumaTotal
-    }
+    const {borrarTodo, cartCount, cartItems, removeItemCart, sumarCart} = useContext(CartContext)
+    
 
     return (
         <div className = "Cart">

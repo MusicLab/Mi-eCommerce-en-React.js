@@ -16,6 +16,11 @@ export const CartProvider = ({children}) => {
     const removeItemCart = (id) => {
         setCartItems(cartItems.filter(item => item.id !== id ))
     }
+    const sumarCart = (cartItems) => {
+        let sumaTotal = 0
+        cartItems.forEach((i) => sumaTotal += i.count*i.price )
+        return sumaTotal
+    }
     const borrarTodo = () => {
         setCartItems(([]))
     }
@@ -40,7 +45,7 @@ export const CartProvider = ({children}) => {
         return cartItems.length
     }
     return (
-        <CartContext.Provider value={{borrarTodo, itemQuantity, cartCount, count, setCount, removeItemCart, cartItems, addItemCart}}>
+        <CartContext.Provider value={{borrarTodo, itemQuantity, cartCount, count, setCount, sumarCart, removeItemCart, cartItems, addItemCart}}>
             {children}
         </CartContext.Provider>
     )
