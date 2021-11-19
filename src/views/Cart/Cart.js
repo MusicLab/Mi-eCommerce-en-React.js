@@ -9,7 +9,7 @@ import FormCompra from "../../components/FormCompra/FormCompra"
 
 
 const Cart = () => {
-    const {borrarTodo, cartCount, cartItems, removeItemCart, sumarCart} = useContext(CartContext)
+    const {borrarTodo, cartItems, removeItemCart, sumarCart} = useContext(CartContext)
     
 
     return (
@@ -29,8 +29,8 @@ const Cart = () => {
             
             <h1>$ Total : {sumarCart(cartItems)} </h1>
             {cartItems.length > 1 ? <button onClick= {() => borrarTodo()}>Remover todos los items</button> : <></>}
-            <button>Terminar Compra</button>
-            <FormCompra></FormCompra>
+
+            { cartItems.length >= 1 && <FormCompra/>}
         </div>
     )
 }

@@ -17,10 +17,16 @@ const ItemCount = ({onAdd, initial, stock}) => {
     function clearState () {
         setCount(parseInt(initial))
     }
-    function todos() { 
-
-        onAdd(count)
-        clearState()
+    function todos() {
+        // si no hay stock del producto en la BD no ejecuta las funciones de agregar al carro
+        if (stock <= 0) {
+            alert("No hay mas stock de este producto")
+        } 
+        else {
+            onAdd(count)
+            clearState()
+        }
+        
 
     }
 

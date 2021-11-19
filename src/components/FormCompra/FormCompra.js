@@ -1,6 +1,6 @@
 import { useFormik } from 'formik'
 import {Form, Button} from "react-bootstrap"
-import React , { useState, useContext }from 'react'
+import React , { useContext }from 'react'
 import "./FormCompra.css" 
 import * as Yup from "yup"
 import * as moment from 'moment';
@@ -14,29 +14,48 @@ import { CartContext } from '../../CartContext'
 
 
 function FormCompra() {
-    const [cartBuy, setCartBuy] = useState()
-    const {cartItems, sumarCart} = useContext(CartContext)
+    const {modificarStock, cartItems, sumarCart, borrarTodo} = useContext(CartContext)
     
     const formik = useFormik({
         initialValues:
-        {name: "",
+        {
+        name: "",
+        phone: "",
         email: "",
     },
         
         onSubmit: async (data) => {
             const sumaTot = sumarCart(cartItems)
             const fecha = moment().toString()
-            const docRef = await addDoc(collection(db, "compras"), {
-                buyer: {name: data.name,
-                email: data.email,},
+            const { id } = await addDoc(collection(db, "compras"), {
+                buyer: {
+                name: data.name,
+                phone: data.phone,
+                email: data.email,
+            },
                 items: cartItems,
                 date: fecha,
                 total: sumaTot,
             })
+            alert(`su compra ha sido generada ${id}`)
+            borrarTodo()
+            modificarStock()
+
             
         },
         validationSchema: Yup.object({
-            name: Yup.string().required("Es requerido un nombre").min(2, "Se requiere mas de 2 letras").max(50, "No se puede exceder los 50 caracteres"),
+            name: Yup.string()
+            .required("Se requiere un nombre")
+            .min(2, "Se requiere mas de 2 letras")
+            .max(50, "No se puede exceder los 50 caracteres"),
+            phone: Yup.number()
+            .required("Se requiere un numero de telefono")
+            .min(11111111, "Se requiere un numero de telefono valido")
+
+            // por las dudas validamos que solo puedan ingresarse numeros, igualmente el form es de tipo number asi que seria una doble validacion por seguridad
+            .typeError("Ingrese solo numeros")
+            
+            .max(999999999999999, "Debe contener menos numeros"), 
             email: Yup.string().email("Debe ser un formato de Email valido").required("Es requerido un Email")
         })
     }) 
@@ -53,6 +72,15 @@ function FormCompra() {
                         value= {formik.values.name}>
                         </Form.Control>
                         <Form.Control.Feedback type="invalid">{formik.errors.name}</Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Control type="number" 
+                        placeholder="Telefono" 
+                        name="phone" onChange={formik.handleChange} 
+                        isInvalid= {formik.errors.phone}
+                        value= {formik.values.phone}>
+                        </Form.Control>
+                        <Form.Control.Feedback type="invalid">{formik.errors.phone}</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group>
                         <Form.Control type="text" 

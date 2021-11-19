@@ -32,7 +32,7 @@ const ItemDetail = ({match}) => {
     }, [match.params.id])
     return (
         <div className= "ItemDetail">
-            <div className= "ItemCount-div">{ <ItemCount onAdd= {onAdd} initial= {1} stock= {10} />}</div>
+            <div className= "ItemCount-div">{ <ItemCount onAdd= {onAdd} initial= {1} stock= {item.stock} />}</div>
             <div className= "Item">
                 <h1 className="h1-Item">{item.title}</h1>
                 <img className= "img-Item" src={item.img} alt={item.title}></img>

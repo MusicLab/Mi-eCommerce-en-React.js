@@ -31,12 +31,16 @@ const ItemList = ({categoria}) => {
       
     return (
         <div className= "ItemList">
-            {items.map( (item) => {   
-            return(
-                <div key={item.id}>
-                    <Link className= "Link"to={`/detail/${item.id}`}><Item data={item}/></Link>
-                </div>
-            )  
+            {items.map( (item) => {
+                // si no hay stock del item no renderiza en ninguna view
+                if (item.stock > 0)
+                    return(
+                    <div key={item.id}>
+                        <Link className= "Link"to={`/detail/${item.id}`}><Item data={item}/></Link>
+                    </div>
+                ) 
+                return null    
+            
             })}
         </div>
     )
