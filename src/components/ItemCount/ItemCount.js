@@ -1,10 +1,10 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import "./ItemCount.css"
 import { CartContext } from '../../CartContext'
 
 const ItemCount = ({onAdd, initial, stock}) => {
     const {count, setCount} = useContext(CartContext)
-    
+    const [initial2, setInitial] = useState(1)
     function decrementCount() {
         if (count > 0)
         {setCount(prevCount => prevCount -1)}
@@ -15,7 +15,7 @@ const ItemCount = ({onAdd, initial, stock}) => {
     }
 
     function clearState () {
-        setCount(parseInt(initial))
+        setCount(parseInt(initial2))
     }
     function todos() {
         // si no hay stock del producto en la BD no ejecuta las funciones de agregar al carro

@@ -27,13 +27,28 @@ function FormCompra() {
         onSubmit: async (data) => {
             const sumaTot = sumarCart(cartItems)
             const fecha = moment().toString()
+            
+            // esto filtra los items del cart solo para mostrar id title y price
+            const cartItemsModifiedForDb = (cartItems) => {
+                const filteredList = []
+                cartItems.forEach ( product =>{
+                    let productFiltered = {
+                        id: product.id,
+                        title: product.title,
+                        price: product.price,
+                    }
+                    filteredList.push(productFiltered)
+                })
+                return filteredList
+            }
+
             const { id } = await addDoc(collection(db, "compras"), {
                 buyer: {
                 name: data.name,
                 phone: data.phone,
                 email: data.email,
             },
-                items: cartItems,
+                items: cartItemsModifiedForDb(cartItems),
                 date: fecha,
                 total: sumaTot,
             })
@@ -54,7 +69,7 @@ function FormCompra() {
 
             // por las dudas validamos que solo puedan ingresarse numeros, igualmente el form es de tipo number asi que seria una doble validacion por seguridad
             .typeError("Ingrese solo numeros")
-            
+
             .max(999999999999999, "Debe contener menos numeros"), 
             email: Yup.string().email("Debe ser un formato de Email valido").required("Es requerido un Email")
         })
