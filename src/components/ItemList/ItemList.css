@@ -2,7 +2,8 @@
     display:grid;
     grid-template-columns: repeat(4,1fr);
     flex-direction: column;
-    column-gap: 30px;
+    column-gap: 0px;
+    margin: 10px
 
 }
 
