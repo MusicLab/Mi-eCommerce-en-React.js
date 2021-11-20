@@ -1,12 +1,12 @@
-cambiar fetch por axios
-implementar redux
+
+
 modificar todas las funciones para que sean funcionales
 
 https://www.framer.com/motion/
 
 
 PARA VER CON ARI
-repasar route
+
 como deberia ser itemcount
 crear archivo ENV
 
