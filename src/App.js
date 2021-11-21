@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import React from "react"
 
 
+
+
 // Components
 import NavBar from "./components/NavBar/NavBar.js"
 
@@ -19,7 +21,6 @@ import {CartProvider} from "./CartContext"
 
 
 function App() {
-  
   return (
     <CartProvider>
       <div className="App">
