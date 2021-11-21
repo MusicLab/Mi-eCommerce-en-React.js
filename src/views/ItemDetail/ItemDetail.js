@@ -27,18 +27,17 @@ const ItemDetail = ({match}) => {
             querySnap.forEach((document)=> {setItem({...document.data(), id: document.id})
           })  
           }
-            requestDataWhere()
-
-    }, [match.params.id])
+        requestDataWhere()
+        setCount(1)
+    }, [match.params.id, setCount])
     return (
         <div className= "ItemDetail">
             <div className= "ItemCount-div">{ <ItemCount onAdd= {onAdd} initial= {1} stock= {item.stock} />}</div>
             <div className= "Item">
-                <h1 className="h1-Item">{item.title}</h1>
+                <h2>{item.title}</h2>
                 <img className= "img-Item" src={item.img} alt={item.title}></img>
                 <h2>{item.price}</h2>
-                <h2>{item.description}</h2>
-                <h2>{item.category}</h2>
+                <h4>{item.description}</h4>
             </div>
         </div>
     )

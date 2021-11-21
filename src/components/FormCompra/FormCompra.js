@@ -78,7 +78,6 @@ function FormCompra() {
     return (
         <div className= "FormCompra">
             <Form onSubmit={formik.handleSubmit}>
-                <Form.Label>Rellena el formulario para continuar con la compra</Form.Label>
                     <Form.Group>
                         <Form.Control type="text" 
                         placeholder="Nombre y Apellido" 

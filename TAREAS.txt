@@ -1,13 +1,5 @@
-
-
-modificar todas las funciones para que sean funcionales
-
 https://www.framer.com/motion/
 
-
-PARA VER CON ARI
-
-como deberia ser itemcount
 crear archivo ENV
 
 
