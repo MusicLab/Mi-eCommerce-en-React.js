@@ -1,6 +1,0 @@
-https://www.framer.com/motion/
-
-crear archivo ENV
-
-
-
