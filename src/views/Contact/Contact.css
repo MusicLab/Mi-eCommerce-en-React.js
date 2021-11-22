@@ -1,3 +1,8 @@
 .h1-contact {
-    color:white
+    color:white;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 40px;
+
 }

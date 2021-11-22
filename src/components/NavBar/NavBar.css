@@ -22,19 +22,15 @@
 }
 
 
-.NavBar a {
-    color: rgb(204, 212, 124);
-    display: flex;
-    flex-direction:row;
-    text-decoration:none;
-}
+
+
+
 
 
 .Link {
     color: rgb(204, 212, 124);
     display: flex;
-    padding: 30px;
-    font-weight: 10px
+    padding: 10px;    
 }
 
 .img-NavBar {
@@ -47,24 +43,18 @@
     width: 90px;
 }
 
-.p-navbar {
-    position: absolute;
-    color:red;
-    top: 20%;
-    right: 27%;
-    background-color: white;
-    backdrop-filter: blur(20px);
-    width: 20px;
-    height:  20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    border: solid;
-    border-width: 0px;
-    border-color: white;
-}
 
 .CartWidget {
     position: relative;
     font-weight: 800;
+}
+
+.active {
+    font-weight: bold;
+    color:black
+}
+
+.Link:hover {
+    font-weight: bold;
+    color:yellow
 }

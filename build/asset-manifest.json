@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.157bddad.chunk.css",
+    "main.js": "/static/js/main.ee411f61.chunk.js",
+    "main.js.map": "/static/js/main.ee411f61.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b7132308.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b7132308.js.map",
+    "static/css/2.d8cb5cde.chunk.css": "/static/css/2.d8cb5cde.chunk.css",
+    "static/js/2.205f6fce.chunk.js": "/static/js/2.205f6fce.chunk.js",
+    "static/js/2.205f6fce.chunk.js.map": "/static/js/2.205f6fce.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.d8cb5cde.chunk.css.map": "/static/css/2.d8cb5cde.chunk.css.map",
+    "static/css/main.157bddad.chunk.css.map": "/static/css/main.157bddad.chunk.css.map",
+    "static/js/2.205f6fce.chunk.js.LICENSE.txt": "/static/js/2.205f6fce.chunk.js.LICENSE.txt",
+    "static/media/cart.6efd618f.PNG": "/static/media/cart.6efd618f.PNG",
+    "static/media/favicon.e6cb64ca.jpg": "/static/media/favicon.e6cb64ca.jpg",
+    "static/media/App.css": "/static/media/honeycomb-gray-volume.1593094a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b7132308.js",
+    "static/css/2.d8cb5cde.chunk.css",
+    "static/js/2.205f6fce.chunk.js",
+    "static/css/main.157bddad.chunk.css",
+    "static/js/main.ee411f61.chunk.js"
+  ]
+}
