@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: row;
     color: rgb(204, 212, 124);
-    position: fidex
+    
     
 }
 
@@ -21,7 +21,23 @@
     
 }
 
-
+p.p-navbar {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    font-size: 15px;
+    border-radius: 30px;
+    border-width: 3px;
+    background-color:white;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    right: -75px;
+    top: 5px;
+    color: rgb(212, 54, 54);
+}
 
 
 
@@ -44,10 +60,6 @@
 }
 
 
-.CartWidget {
-    position: relative;
-    font-weight: 800;
-}
 
 .active {
     font-weight: bold;
@@ -58,3 +70,4 @@
     font-weight: bold;
     color:yellow
 }
+

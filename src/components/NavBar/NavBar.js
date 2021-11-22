@@ -24,9 +24,9 @@ const NavBar = () => {
                     <NavLink className= "Link" to= "/category/accesorios"><strong>Accesorios</strong></NavLink>
                 </ul>
             </div>
-            <div className= "CartWidget">
-                {cartItems.length > 0 && <p className= "p-navbar">{cartItems.length}</p>}
-                <NavLink className= "Link" to= "/cart"><img className= "img-NavBar-cart" src={imgCart} alt="cart"/></NavLink>
+            <div className= "CartWidget-NavBar">
+                
+                <NavLink className= "Link" to= "/cart">{cartItems.length > 0 && <p className= "p-navbar">{cartItems.length}</p>}<img className= "img-NavBar-cart" src={imgCart} alt="cart"/></NavLink>
             </div>
                   
         </nav>

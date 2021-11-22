@@ -1,8 +1,8 @@
 .CartWidget {
     display: flex;
     justify-content: center;
-    align-items: right;
     border-radius: 15px;
+    max-height: 1px
 }
 
 .CartWidget img {
